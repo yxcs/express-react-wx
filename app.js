@@ -6,19 +6,20 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var ejs = require('ejs');
 
-var webpack = require("webpack");
-var webpackDevMiddleware = require('webpack-dev-middleware'),
-    webpackHotMiddleware = require('webpack-hot-middleware'),
-    webpackDevConfig = require('./webpack.config.dev');
-
-var compiler = webpack(webpackDevConfig);
-
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
-app.use(webpackDevMiddleware(compiler, {
+if(process.env.NODE_ENV === 'dev') {
+  var webpack = require("webpack");
+  var webpackDevMiddleware = require('webpack-dev-middleware'),
+    webpackHotMiddleware = require('webpack-hot-middleware'),
+    webpackDevConfig = require('./webpack.config.dev');
+
+  var compiler = webpack(webpackDevConfig);
+
+  app.use(webpackDevMiddleware(compiler, {
 
     // public path should be the same with webpack config
     publicPath: webpackDevConfig.output.publicPath,
@@ -26,8 +27,10 @@ app.use(webpackDevMiddleware(compiler, {
     stats: {
         colors: true
     }
-}));
-app.use(webpackHotMiddleware(compiler));
+  }));
+  app.use(webpackHotMiddleware(compiler));
+}
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
