@@ -4,7 +4,7 @@
 使用reload 等实现了node的动态更新，不用每次更改服务都重启一下  
 #### 主要功能
 其实没什么功能，主要是测试框架。  
-实现了输入微信公众号，通过爬虫获取该公众号下的最新的10条文章，并显示
+实现了输入微信公众号，通过爬虫获取该公众号下的最新的10条文章，并显示    
 是的，有个小小小小的小爬虫   
 #### 文件结构
 app.js 为入口文件  
@@ -19,17 +19,17 @@ webpack.config.js       正式运行时使用的webpack文件
     React、react-router@4、webpack、NodeJs、Express、async、cheerio、axios、request  
 东西多，但是没有啥实际意义  
 #### 使用
-```shell
+```nodejs
 git clone https://github.com/yxcs/express-react-wx.git
 cd express-react-wx
 npm install
 ```
 测试
-```shell
+```nodejs
 NODE_ENV=dev npm run dev
 ```
 正式
-```shell
+```nodejs
 webpack 
 NODE_ENV=production npm start
 ```
