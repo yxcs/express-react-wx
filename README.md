@@ -16,7 +16,7 @@ webpack.config.js       正式运行时使用的webpack文件
 
 #### 工具
 使用的东西包括：  
-    React、react-router@4、webpack、NodeJs、Express、async、cheerio、axios、request  
+    React、react-router@4、antd、webpack、NodeJs、Express、async、cheerio、axios、request  
 东西多，但是没有啥实际意义  
 #### 使用
 ```nodejs
