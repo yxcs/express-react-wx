@@ -33,3 +33,5 @@ NODE_ENV=dev npm run dev
 webpack 
 NODE_ENV=production npm start
 ```
+#### 展示
+![页面展示](https://github.com/yxcs/express-react-wx/blob/master/public/images/show.jpg)
