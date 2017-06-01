@@ -33,3 +33,4 @@ NODE_ENV=dev npm run dev
 webpack 
 NODE_ENV=production npm start
 ```
+![sdfs](https://github.com/yxcs/express-react-wx/blob/master/views/assets/2zrdI1g.jpg)
